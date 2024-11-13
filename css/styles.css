@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    nav h1 {
+        margin: 0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('../img/herobg.jpg') no-repeat center center;
+    background-size: 100%;
+    text-shadow:
+    3px 3px 0px black,
+    6px 3px 0px black;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h2 {
+    font-size: 60px;
+}
+
+.hero p {
+    font-size:30px;
+}
+
+.hero button {
+    width: 30vh;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about, .services, .contact, .goals{
+    background: #f4f4f4;
+    margin: 20px 0;
+    border-radius: 8px;
+    padding: 20px;
+    /* opacity: 0; */
+    transition: opacity 0.5s ease;
+}
+
+    .about.visible, .services.visible, .contact.visible {
+        animation: slideIn 0.5s forwards;
+        opacity: 1;
+    }
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 60vh;
+    height: 10vh;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+    animation: popIn 0.5s ease-in;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav div {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+        nav div.active {
+            display: flex;
+        }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\styles.css">
+    <title>Tecno Rescate</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tecno Rescate</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div id="nav-links">
+                <a href="#about">Sobre Nosotros</a>
+                <a href="#objectives">Objetivos</a>
+                <a href="#services">Servicios</a>
+                <a href="#contact">Contáctanos</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Tu solución tecnológica a un clic de distancia</h2>
+        <p>Venta y reparación de portátiles en sitio o a domicilio</p>
+        <button onclick="scrollToContact()">Solicita tu servicio ahora</button>
+    </div>
+
+    <div class="section" id="about">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+            Brindamos servicios de venta y reparación de portátiles en sitio o a domicilio. En Tecno Rescate,
+            nos enfocamos en posicionarnos como un proveedor eficiente y confiable, con el objetivo de ganar la
+            confianza de la comunidad y expandirnos a más sectores.
+        </p>
+    </div>
+
+    <div class="section goals" id="goals">
+        <h2>Metas</h2>
+        <p><strong>Implementar estrategias de posicionamiento</strong> que fortalezcan nuestra imagen como un proveedor confiable y eficiente, diferenciándonos en el mercado local.</p>
+        <p><strong>Desarrollar alianzas estratégicas</strong> con otras empresas y organizaciones locales para potenciar el alcance y la efectividad de nuestros servicios ofrecidos.</p>
+    </div>
+
+    <div class="section services" id="services">
+        <h2>Nuestros Servicios</h2>
+        <p><strong>Venta de Portátiles:</strong> Encuentra el portátil perfecto para ti.</p>
+        <p><strong>Reparación a Domicilio:</strong> Reparamos tu portátil en el lugar que elijas.</p>
+        <p><strong>Soporte Técnico:</strong> Asesoría y soporte técnico en línea y presencial.</p>
+    </div>
+
+    <div class="section contact" id="contact">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <br />
+            <textarea placeholder="Mensaje" required></textarea>
+            <br />
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: (+57) 300 2348964 | Email: tecnorescate@gmail.com</p>
+    </div>
+
+    <footer>
+        <p>© 2024 Tecno Rescate. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
